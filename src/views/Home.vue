@@ -1,5 +1,10 @@
 <template>
-  <div>vue2 question</div>
+  <div>
+    <div>vue2 question</div>
+    <div>
+      <router-link v-for="(routeName, idx) in cp_linkByRoutes" :key="routeName" :to="{ name: routeName }"><p>{{ routeName }}</p></router-link>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -8,11 +13,23 @@ export default {
   data() {
     return {}
   },
-  computed: {},
+  computed: {
+    cp_linkByRoutes() {
+      let ret = []
+      let routes = this.$router.getRoutes()
+      routes.forEach(route => {
+        let { name = '' } = route
+        ret.push(name)
+      })
+      return ret
+    },
+  },
   watch: {},
-  created() { },
+  created() {},
   mounted() { },
-  methods: {},
+  methods: {
+    
+  },
 }
 </script>
 
