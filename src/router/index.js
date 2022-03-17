@@ -19,6 +19,11 @@ const routes = [
 		name: 'Object.defineProperty',
 		component: () => import('@/views/chapter-2/code-0/index.vue'),
 	},
+	{
+		path: '/prototype/code-0/index',
+		name: 'Object.prototype',
+		component: () => import('@/views/prototype/code-0/index.vue'),
+	},
 ]
 
 const router = new VueRouter({
