@@ -8,6 +8,10 @@ Vue.config.productionTip = false
 // style
 import '@/style/index.scss'
 
+// el-v-dlc
+import ElementVDlc from 'element2-v-dlc'
+Vue.use(ElementVDlc)
+
 new Vue({
   router,
   store,

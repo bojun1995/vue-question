@@ -24,6 +24,11 @@ const routes = [
 		name: 'Object.prototype',
 		component: () => import('@/views/prototype/code-0/index.vue'),
 	},
+	{
+		path: '/test-v-dlc',
+		name: 'test-v-dlc',
+		component: () => import('@/views/test-v-dlc/index.vue'),
+	},
 ]
 
 const router = new VueRouter({
